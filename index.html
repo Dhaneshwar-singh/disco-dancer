@@ -9,7 +9,7 @@
     <link rel="icon" href="Up2T-unscreen.gif" type="image/gif" sizes="16x16">
     <script>
         function getRandomColor() { 
-            return (Math.floor(Math.random() * (350 - 50 )) + 10);
+            return (Math.floor(Math.random() * (350 - 150 )) + 10);
         }
         
         function getColor() {
@@ -18,7 +18,7 @@
         
         (function changeColor(){
             setInterval((() => document.body.style.background = getColor()), 
-                500);
+                1000);
         })()  
 
         
