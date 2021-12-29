@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    <link rel="icon" href="Up2T-unscreen.gif" type="image/gif" sizes="16x16">
+    <script>
+        function getRandomColor() { 
+            return (Math.floor(Math.random() * (350 - 50 )) + 10);
+        }
+        
+        function getColor() {
+          return `rgb(${getRandomColor()}, ${getRandomColor()}, ${getRandomColor()})`;
+        }
+        
+        (function changeColor(){
+            setInterval((() => document.body.style.background = getColor()), 
+                1000);
+        })()  
+
+        
+
+  function toggleSound() {
+          var audioElem = document.getElementById('audio');
+          var player = document.getElementById('player');
+          if (audioElem.paused){
+            audioElem.play();
+            player.innerHTML = "Pause&#x23f8;";}
+             
+          else{
+            audioElem.pause();
+            player.innerHTML = "Play ►";}
+  }
+  function toggleSound2() {
+    var audioElem = document.getElementById('audio2');
+    var player = document.getElementById('player2');
+    if (audioElem.paused){
+      audioElem.play();
+      player.innerHTML = "Pause&#x23f8;";}
+       
+    else{
+      audioElem.pause();
+      player.innerHTML = "Play ►";}
+}
+function toggleSound3() {
+  var audioElem = document.getElementById('audio3');
+  var player = document.getElementById('player3');
+  if (audioElem.paused){
+    audioElem.play();
+    player.innerHTML = "Pause&#x23f8;";}
+     
+  else{
+    audioElem.pause();
+    player.innerHTML = "Play ►";}
+}
+
+
+       
+
+</script>
+<style>
+
+  .dj2{
+     position: relative;
+     float: right;
+
+  }
+  #player{
+   padding: 20px 10px;
+   text-align: center;
+   left: 46%;
+   top: 30%;
+   position: absolute;
+   font-size: 30px;
+   
+   background-color:rgb(188, 143, 154);
+   box-shadow: rgb(145, 141, 139);
+   border-radius: 90px;
+  }
+  #player2{
+    padding: 20px 70px;
+    text-align: center;
+    left: 25%;
+    top: 30%;
+    position: absolute;
+    font-size: 30px;
+    word-wrap: break-word;
+    background-color:rgb(188, 143, 154);
+    box-shadow: rgb(145, 141, 139);
+    border-radius: 20px;
+   }
+   #player3{
+    padding: 20px 60px;
+    text-align: center;
+    left: 57%;
+    top: 30%;
+    position: absolute;
+    font-size: 30px;
+    
+    background-color:rgb(188, 143, 154);
+    box-shadow: rgb(145, 141, 139);
+    border-radius: 20px;
+   }
+  #player:hover {
+    cursor : pointer;
+  }
+    
+    footer{
+        font-size: 30px;
+        padding-left: 27%;
+    }
+    footer a{
+        text-decoration: none;
+      color: rgb(66, 22, 48);
+    }
+    footer button{
+ color: black;
+ border-radius: 2px;
+ box-shadow: seashell;
+    }
+    footer button:hover{
+        cursor : pointer;
+    }
+    @media only screen and (max-width: 900px ) {
+      #player3{ padding: 20px 10px;
+        text-align: center;
+        left: 65%;
+        top: 45%;
+        position: absolute;
+        font-size: 30px;
+        
+        background-color:rgb(188, 143, 154);
+        box-shadow: rgb(145, 141, 139);
+        border-radius: 90px;
+       }
+       #player2{ padding: 20px 10px;
+        text-align: center;
+        left: 0%;
+        top: 45%;
+        position: absolute;
+        font-size: 30px;
+        
+        background-color:rgb(188, 143, 154);
+        box-shadow: rgb(145, 141, 139);
+        border-radius: 90px;
+       }
+       #player{ padding: 20px 10px;
+        text-align: center;
+        left: 34%;
+        top: 45%;
+        position: absolute;
+        font-size: 30px;
+        
+        background-color:rgb(188, 143, 154);
+        box-shadow: rgb(145, 141, 139);
+        border-radius: 90px;
+       }
+
+      
+
+      
+    }
+</style>
+    <title>DISCO  </title>
+</head>
+<body>
+
+
+    <img src="Up2T-unscreen.gif" alt="dj" >
+<!-- play pause toggle  https://siongui.github.io/2012/10/12/javascript-toggle-sound-onclick/-->
+
+    <button id="player" type="button"
+  onclick="javascript:toggleSound(); ">
+  Play &#9658;
+</button>
+<button id="player2" type="button"
+onclick="javascript:toggleSound2(); ">
+Play &#9658;
+</button>
+<button id="player3" type="button"
+onclick="javascript:toggleSound3(); ">
+Play &#9658;
+</button>
+<audio id="audio">
+  <source src="audio.mp3" type="audio/mpeg">
+Your browser does not support this audio format.
+</audio>
+<audio id="audio2">
+  <source src="audio2.mp3" type="audio/mpeg">
+Your browser does not support this audio format.
+</audio>
+<audio id="audio3">
+  <source src="audio3.mp3" type="audio/mpeg">
+Your browser does not support this audio format.
+</audio>
+  <img class="dj2" src="Up2T-unscreen.gif" alt="dj2">
+
+
+    <footer>copyright &copy; All Rights Reserved <a href ="https://linktr.ee/Dhaneshwar_singh">Dhaneshwar Singh</a> <button style="font-size:24px" onclick="location.href=''">FORK ON GITHUB <i class="fa fa-github"></i></button></footer>
+    
+</body>
+</html>
